@@ -4,5 +4,5 @@ export class Plant {
   picture: string;
   bloom: string;
   description: string;
-
+  created: Date;
 }
