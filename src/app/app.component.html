@@ -1,14 +1,14 @@
-<h1 class="center">Liste des plantes</h1>
+<h1 class="center">plantes.com, votre annuaire de plantes gratuit !</h1>
 
 <div class="container">
   <!-- Page Content goes here -->
   <div class="row">
-    <input #input  (keyup)="selectPlant(input.value)" type="number">
-    <p *ngIf="plantSelected">Vous avez sélection cette plante: {{ plantSelected?.name }}</p>
+    <input #input  (keyup)="selectPlant(input.value)" type="number" >
+    <p *ngIf="plantSelected">Vous avez sélection cette plante: {{ plantSelected.name }}</p>
     <p *ngIf="!plantSelected">Aucune plante n'a été trouvée</p>
 
-    <div *ngFor="let plant of plantList" class="col m4 s6">
-          <div class="card">
+    <div *ngFor="let plant of plantList" class="col l4 m6 s12" >
+          <div class="card" plantBorderCard >
             <div class="card-image">
               <img src={{plant.picture}} alt={{plant.name}}>
             </div>
