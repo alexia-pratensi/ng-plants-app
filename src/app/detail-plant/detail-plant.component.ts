@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail-plant',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   ]
 })
 export class DetailPlantComponent {
-
+  constructor(private router: Router {}){}
 }
