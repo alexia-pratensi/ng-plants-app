@@ -4,18 +4,26 @@ import { Plant } from './plant';
 
 @Component({
   selector: 'app-root',
-  template:`<h1>Liste de plantes</h1>`
+  templateUrl: 'app.component.html'
 })
-export class AppComponent implements OnInit{
+
+export class AppComponent implements OnInit {
  plantList: Plant[] = PLANTS;
+ plantSelected: Plant|undefined;
 
   ngOnInit() {
     console.table(this.plantList)
-    this.selectPlant(this.plantList[0])
   }
 
-  selectPlant(plant: Plant) {
-    console.log(`Vous avez cliqué sur la plante ${plant.name}`)
+  selectPlant(plantId: string) {
+    const plant: Plant|undefined = this.plantList.find(plant => +plantId == plant.id)
+    if (plant) {
+      console.log(`Vous avez cliqué sur la plante ${plant.name}`);
+      this.plantSelected = plant;
+    } else {
+      console.log(`Vous avez demandé une plante qui n'existe pas.`);
+      this.plantSelected = plant;
+    }
   }
 
 }
