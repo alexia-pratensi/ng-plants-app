@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: 'plants', component: ListPlantComponent},
   {path: 'plant/:id', component: DetailPlantComponent},
   {path: '', redirectTo: 'plants', pathMatch: 'full'},
-  {path: '', component: PageNotFoundComponent}
+  {path: '**', component: PageNotFoundComponent}
 
 ];
 
