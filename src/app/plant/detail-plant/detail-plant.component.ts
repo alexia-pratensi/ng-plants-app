@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PLANTS } from '../plant_list';
 import { Plant } from '../plant'
 import { PathLocationStrategy } from '@angular/common';
+import { PlantService } from '../plant.service';
 
 @Component({
   selector: 'app-detail-plant',
@@ -15,13 +15,16 @@ export class DetailPlantComponent implements OnInit {
   plantList: Plant [];
   currentPlant : Plant | undefined;
 
-  constructor(private route : ActivatedRoute, private router: Router ){}
+  constructor(
+    private route : ActivatedRoute,
+    private router: Router,
+    private plantService: PlantService
+     ){}
 
   ngOnInit() {
-    this.plantList = PLANTS;
     const plantId : string | null = this.route.snapshot.paramMap.get('id');
     if(plantId) {
-      this.currentPlant = this.plantList.find(plant => plant.id == +plantId)
+      this.currentPlant = this.plantService.getPlantById(+plantId)
     }
   }
 

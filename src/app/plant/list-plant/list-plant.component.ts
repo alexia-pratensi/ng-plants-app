@@ -1,19 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PLANTS } from '../plant_list';
 import { Plant } from '../plant';
 import { Router } from '@angular/router';
+import { PlantService } from '../plant.service';
 
 
 @Component({
   selector: 'app-list-plant',
   templateUrl: './list-plant.component.html',
 })
-export class ListPlantComponent {
+export class ListPlantComponent implements OnInit {
   plantList: Plant[] = PLANTS;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private plantService: PlantService
+   ) {}
 
-  goToPlant(plant: Plant) {
+  ngOnInit(){
+    this.plantList = this.plantService.getPlantList();
+  }
+
+   goToPlant(plant: Plant) {
     this.router.navigate(['/plant', plant.id]);
   }
 
