@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
       <h3>Hey, cette page n'existe pas !</h3>
       <a routerLink="/plants" class="waves-effect waves-teal btn-flat">Retourner à l' accueil</a>
       <br>
-      <img src="../../assets/images/pagenotfound2.jpg"/>
+      <img src="../../assets/images/notfound.png"/>
     </div>
   `,
   styles: [

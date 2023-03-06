@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PLANTS } from '../plant_list';
-import { Plant } from '../plant';
+import { Plant } from '../plant'
 import { PathLocationStrategy } from '@angular/common';
 
 @Component({
