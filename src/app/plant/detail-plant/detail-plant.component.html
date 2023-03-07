@@ -1,31 +1,33 @@
-<div *ngIf="currentPlant" class="row">
-  <div class="col s12 m8 offset-m2">
-    <div class="card horizontal hoverable">
-      <div class="card-image">
-        <img [src]="currentPlant.picture">
-      </div>
-      <div class="card-stacked">
-        <h4 class="center">{{ currentPlant.name }}</h4>
-      <div class="card-content">
-        <table class="bordered striped">
-          <tbody>
-            <tr>
-              <td>Floraison</td>
-              <td><em>{{ currentPlant.bloom }}</em></td>
-            </tr>
-            <br>
-            <tr>
-              <td>Description</td>
-              <td><em>{{ currentPlant.description }}</em></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="card-action">
-        <a (click)="goBack()">Retour</a>
+<div class="container">
+  <div *ngIf="currentPlant" class="row">
+    <div class="col s12 m8 offset-m2">
+      <div class="card horizontal hoverable">
+        <div class="card-image">
+          <img [src]="currentPlant.picture">
+        </div>
+        <div class="card-stacked">
+          <h4 class="center">{{ currentPlant.name }}</h4>
+        <div class="card-content">
+          <table class="bordered striped">
+            <tbody>
+              <tr>
+                <td>Floraison</td>
+                <td><em>{{ currentPlant.bloom }}</em></td>
+              </tr>
+              <br>
+              <tr>
+                <td>Description</td>
+                <td><em>{{ currentPlant.description }}</em></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-action">
+          <a (click)="goBack()">Retour</a>
+        </div>
       </div>
     </div>
+    </div>
+    </div>
+    <h4 *ngIf='!currentPlant' class="center">Aucune plante à afficher !</h4>
   </div>
-  </div>
-  </div>
-  <h4 *ngIf='!currentPlant' class="center">Aucune plante à afficher !</h4>

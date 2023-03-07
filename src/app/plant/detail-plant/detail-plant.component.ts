@@ -7,8 +7,7 @@ import { PlantService } from '../plant.service';
 @Component({
   selector: 'app-detail-plant',
   templateUrl: './detail-plant.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class DetailPlantComponent implements OnInit {
 

@@ -16,13 +16,17 @@ const plantRoutes: Routes = [
   declarations: [
     BorderCardDirective,
     ListPlantComponent,
-    DetailPlantComponent,],
+    DetailPlantComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(plantRoutes)
   ],
   providers: [
     PlantService
-  ]
+  ],
+  // exports: [
+  //   PlantModule
+  // ]
 })
 export class PlantModule { }
