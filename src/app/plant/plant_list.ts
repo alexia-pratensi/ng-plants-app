@@ -7,7 +7,7 @@ export const PLANTS: Plant[] = [
   picture: 'https://hips.hearstapps.com/hmg-prod/images/types-of-flowers-for-garden-astrantia-1674846661.jpeg?crop=1xw:1xh;center,top&resize=980:*',
   bloom: 'Printemps à été',
   description: "Cette plante vivace moins connue est en fait un favori des jardins de cottage à l'ancienne. Ses jolies fleurs durent longtemps et attirent des tonnes de pollinisateurs.",
-  created: new Date(),
+  created: new Date()
   },
   {
   id: 2,
